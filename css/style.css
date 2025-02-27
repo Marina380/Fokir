@@ -563,7 +563,8 @@ body {
   border-radius: 5px;
 }
 .layer-img {
-  background-image: url(Image/work-7.jpg);
+ 
+  background-image: url( ../css/image/work-7.jpg);
   top: 20px;
   left: 20px;
   position: absolute;
