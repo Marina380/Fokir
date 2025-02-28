@@ -390,21 +390,23 @@ body {
 
 .navbar {
   background-color: transparent;
+  padding: 0;
   position: fixed;
   width: 100%;
-  overflow-x: visible;
+  /* overflow-x: visible; */
   /* border-top: 1px solid transparent; */
   box-shadow: 0px 1px 3px rgba(50, 50, 50, 0.4);
   z-index: 99;
   transition: all 0.3s;
+  opacity: 1;
 }
 .navbar:hover {
   background-color: #333;
+
   transform: translateY(0%);
 }
 .navlogo {
   /* background-color: red; */
-  float: left;
   width: 30%;
   padding: 20px 0px;
   text-align: center;
@@ -418,16 +420,17 @@ body {
 }
 .navmenu {
   /* background-color: teal; */
-  float: left;
+
   width: 70%;
   font-weight: 300;
   text-align: center;
   position: relative;
+  padding-bottom: 24px;
 }
 .navmenu ul {
   /* background-color: aqua; */
   list-style: none;
-  padding: 20px 50px;
+  /* padding: 20px 50px; */
   float: right;
   /* margin-right: 90px; */
   position: absolute;
@@ -444,7 +447,16 @@ body {
   font-weight: 300;
   transition: all 0.3s;
 }
+.navmob ul li a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: all 0.3s;
+}
 .navmenu ul li a:hover {
+  color: #ff305b;
+}
+.navmob ul li a:hover {
   color: #ff305b;
 }
 .navmenu ul span {
@@ -454,8 +466,9 @@ body {
 /* HOME */
 
 .home {
-  
   background-image: url(../css/image/slider-02.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100vh;
   /* position: relative; */
@@ -694,7 +707,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 .parent {
-  padding: 0px 90px;
+  /* padding: 0px 90px; */
 }
 .section3-item {
   /* background-color: violet; */
@@ -738,7 +751,9 @@ body {
 }
 
 /* OUR PORTFOLIO */
-
+body {
+  overflow-x: hidden;
+}
 .section4 {
   /* background-color: teal; */
   margin-top: 60px;
@@ -972,8 +987,8 @@ body {
   margin-bottom: 30px;
 }
 .parent-blog {
-  padding: 60px 70px;
-  /* margin: 20px; */
+  padding: 60px 0px;
+  margin-right: 20px;
 }
 .parent4-hr {
   margin-bottom: 50px;
@@ -994,13 +1009,16 @@ body {
 }
 .blog-item {
   background-color: #fff;
+  /* background-color: red; */
   border: 10px solid #f1f1f1;
   padding-bottom: 30px;
   /* background-color: gray; */
-  width: 33.3%;
-  float: left;
+  width: 60%;
+  margin-right: 130px;
+  /* float: left; */
+
   height: auto;
-  text-align: left;
+  /* text-align: left;   */
   /* padding: 20px; */
   /* margin-left: 0px; */
 }
@@ -1146,4 +1164,66 @@ form {
 }
 .feedback1 {
   display: block;
+}
+@media (min-width: 200px) {
+  .section3-item {
+    width: 80%;
+  }
+  .x {
+    display: none;
+  }
+  .y {
+    display: block;
+  }
+  /* .x {
+    margin-top: 400px;
+    background-color: #aa2540;
+    text-align: center;
+
+  } */
+  .navmenu ul {
+    display: none;
+  }
+  .navmob ul {
+    display: block;
+  }
+}
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .section3-item {
+    width: 25%;
+    margin: auto;
+  }
+  .navmenu ul {
+    display: flex;
+  }
+  .navmob ul {
+    display: none;
+  }
+
+  .blog-item {
+    width: 30%;
+  }
+  .parent-blog {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    padding-left: 100px;
+  }
+  .container {
+    width: 160%;
+    margin-left: 250px;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
 }
